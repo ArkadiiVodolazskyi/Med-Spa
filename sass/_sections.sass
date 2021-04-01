@@ -1,0 +1,63 @@
+section.banner
+	height: 100vh
+	color: $w
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	&::before
+		content: ''
+		position: absolute
+		z-index: 150
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		background-color: rgba($b, 0.2)
+	.wrapper
+		z-index: 160
+		margin-top: auto
+		padding-bottom: 36px
+		h3
+			color: rgba($w, 0.5)
+			text-transform: uppercase
+			position: relative
+			width: fit-content
+			.fas
+				position: absolute
+				right: 0
+				top: 0
+				transform: translate(150%, -90%)
+				font-size: 16px
+				color: $w
+		h1
+			margin: 18px 0 0 72px
+		.openVideo
+			display: flex
+			align-items: center
+			margin-top: 36px
+			font-size: 16px
+			font-weight: 500
+			opacity: 0.5
+			text-transform: uppercase
+			&:hover
+				opacity: 1
+				svg
+					fill: $purple
+			svg
+				width: 48px
+				margin-right: 12px
+				fill: $w
+		a
+			display: flex
+			align-items: center
+			margin-top: 72px
+			font-size: 14px
+			font-weight: 500
+			opacity: 0.5
+			text-transform: uppercase
+			letter-spacing: 0.84px
+			&:hover
+				opacity: 1
+			svg
+				margin-right: 12px
+				fill: $w

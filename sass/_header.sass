@@ -1,0 +1,99 @@
+aside
+	width: 18.5vw
+	height: 100vh
+	position: fixed
+	z-index: 100
+	left: 0
+	top: 0
+	padding: 36px 36px 36px
+	box-shadow: 6px 0 18px 0 rgba($b, 0.06)
+	text-align: center
+	color: $gd
+	display: flex
+	flex-direction: column
+	.openForm
+		margin-top: 36px
+		padding: 13px 0 14px
+		width: 100%
+		border-radius: 30px
+		background-color: $tsp
+		border: solid 2px $purple
+		font-size: 18px
+		font-weight: 500
+		&:hover
+			background-color: $purple
+			color: $w
+	nav
+		margin-top: 60px
+		li
+			display: block
+			&:not(:first-child)
+				margin-top: 30px
+			&:hover a
+				color: $purple
+			a
+				font-size: 16px
+				font-weight: 500
+				text-transform: uppercase
+				letter-spacing: 0.96px
+	.aside_contacts
+		margin-top: auto
+		.phone
+			font-size: 24px
+			font-weight: 500
+			position: relative
+			> a
+				display: flex
+				justify-content: center
+				align-items: center
+				&:hover
+					color: $purple
+					+ ul
+						max-height: 300px
+						opacity: 1
+						visibility: visible
+				.fa-telegram-plane
+					margin-right: 8px
+					opacity: 0.5
+					font-size: 20px
+				.fa-chevron-down
+					margin-left: 8px
+					opacity: 0.5
+					font-size: 20px
+			> ul
+				position: absolute
+				left: 0
+				top: 100%
+				right: 0
+				max-height: 0
+				opacity: 0
+				visibility: hidden
+				transition: all 0.2s linear
+				background-color: $w
+				padding: 0 10px 10px 10px
+				&:hover
+					max-height: 300px
+					opacity: 1
+					visibility: visible
+				li:hover a
+					color: $purple
+		span
+			margin-top: 24px
+			font-size: 18px
+		.languages
+			margin-top: 36px
+			li
+				font-size: 14px
+				font-weight: 500
+				text-transform: uppercase
+				padding: 0 18px
+				&:not(:first-child)
+					border-left: 1px solid rgba($gd, 0.1)
+				&.current
+					color: rgba($gd, 0.3)
+					pointer-events: none
+				&:hover a
+					color: $purple
+header
+	width: 100%
+	display: none

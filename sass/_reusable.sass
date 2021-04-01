@@ -16,7 +16,7 @@ time, mark, audio, video, button
 	padding: 0
 	border: 0
 	font-size: 100%
-	// font-family: 'Visuelt Pro', sans-serif !important
+	font-family: 'TTNormsPro', sans-serif
 	vertical-align: baseline
 
 /* HTML5 display-role reset for older browsers */
@@ -58,17 +58,70 @@ img
 h1, h2, h3, h4, h5, h6
 	font-weight: bold
 svg
-	width: 100%
+	// width: 100%
+	overflow: visible
 	&:not(.native)
 		fill: inherit
 		g, path
 			fill: inherit
 
 // ---------------------------------------------------------------- Variables
+$b: 			#000000
+$w: 			#ffffff
+$tsp: 		#00000000
+$purple: 	#8651a7
+$gd: 			#383838 // grey-darker
+$gm: 			#717171 // grey-medium
+$gl: 			#a3a3a3 // grey-lighter
+$cream: 	#ededee
+$red: 		#ff1453
+
+// ---------------------------------------------------------------- Defining common tags styles
+h1
+	font-size: 72px
+	font-weight: normal
+h2
+	font-size: 48px
+	font-weight: normal
+h3
+	font-size: 36px
+	font-weight: 500
+h4
+	font-size: 24px
+	font-weight: 500
+	line-height: 1.33
+
 
 // ---------------------------------------------------------------- Functions
 
 // ---------------------------------------------------------------- Classes
+.bg
+	position: relative
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	> img
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		height: 100%
+		width: auto
+
+// .text_main, p
+// 	font-size: 24px
+// 	line-height: 1.33
+// .text_small
+// 	font-size: 18px
+// 	line-height: 1.33
+// .text_smaller
+// 	font-size: 14px
+// 	color: $gm
+
+.mt-180
+	margin-top: 180px
+.mt-144
+	margin-top: 144px
 
 // ---------------------------------------------------------------- Figures
 
@@ -81,9 +134,10 @@ svg
 	color: inherit
 	text-decoration: none
 	box-sizing: border-box
+	line-height: 1.15
 
 // Transitions
-a, button, svg, img
+a, button, svg, .fas
 	transition: all 0.15s linear
 
 html
@@ -99,17 +153,24 @@ body
 	position: relative
 	z-index: 1
 	overflow-x: hidden
+	display: flex
+	flex-wrap: wrap
 	&.discroll
 		position: fixed
 		overflow: hidden
+
+main
+	width: 100%
+	margin-left: 18.5vw
 
 section
 	position: relative
 	z-index: 5
 	overflow: hidden
+	color: $gd
 
 .wrapper
-	// width: 1416px
+	width: 89%
 	margin: 0 auto
 	position: relative
 	z-index: 5
