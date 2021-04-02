@@ -47,17 +47,34 @@ section.banner
 				width: 48px
 				margin-right: 12px
 				fill: $w
-		a
+		.bottom
 			display: flex
+			justify-content: space-between
 			align-items: center
 			margin-top: 72px
-			font-size: 14px
-			font-weight: 500
-			opacity: 0.5
-			text-transform: uppercase
-			letter-spacing: 0.84px
-			&:hover
-				opacity: 1
-			svg
-				margin-right: 12px
-				fill: $w
+			a
+				display: flex
+				align-items: center
+				font-size: 14px
+				font-weight: 500
+				opacity: 0.5
+				text-transform: uppercase
+				letter-spacing: 0.84px
+				&:hover
+					opacity: 1
+				svg
+					margin-right: 12px
+					fill: $w
+			.buttons
+				display: flex
+				align-items: center
+				button
+					&:first-child
+						margin-right: 36px
+					&:last-child
+						transform: rotate(180deg)
+					path
+						stroke: $w
+						transition: all 0.2s linear
+					&:hover path
+						stroke: $purple
