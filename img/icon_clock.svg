@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="Rectangle_95" d="M0 0H24V24H0z" class="cls-1" transform="translate(368 622)"/>
+        </clipPath>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="Mask_Group_60" clip-path="url(#clip-path)" transform="translate(-368 -622)">
+        <g id="clock" transform="translate(363.543 617.543)">
+            <path id="Path_118" d="M17.486 9.6a1.029 1.029 0 1 0-2.057 0v6.857a1.029 1.029 0 0 0 .483.872l4.114 2.571a1.029 1.029 0 0 0 1.09-1.744l-3.631-2.269z" class="cls-1"/>
+            <path id="Path_119" fill="#fff" fill-rule="evenodd" d="M16.457 4.457a12 12 0 1 0 12 12 12 12 0 0 0-12-12zm-9.943 12a9.943 9.943 0 1 1 9.943 9.943 9.943 9.943 0 0 1-9.943-9.943z"/>
+        </g>
+    </g>
+</svg>

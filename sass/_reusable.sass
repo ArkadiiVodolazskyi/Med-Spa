@@ -75,6 +75,7 @@ $gm: 			#717171 // grey-medium
 $gl: 			#a3a3a3 // grey-lighter
 $cream: 	#ededee
 $red: 		#ff1453
+$pink: 		#e77f90
 
 // ---------------------------------------------------------------- Defining common tags styles
 h1
@@ -121,15 +122,29 @@ h4
 		bottom: 0
 		background-color: rgba($b, 0.2)
 
-// .text_main, p
-// 	font-size: 24px
-// 	line-height: 1.33
-// .text_small
-// 	font-size: 18px
-// 	line-height: 1.33
-// .text_smaller
-// 	font-size: 14px
-// 	color: $gm
+.breadcrumbs
+	font-size: 14px
+	color: $gm
+	opacity: 0.7
+	a
+		&:hover
+			color: $purple
+		&:first-of-type
+			color: $purple
+h1.page_title
+	margin-top: 8px
+	position: relative
+	width: max-content
+	&:after
+		content: ''
+		position: absolute
+		z-index: 0
+		bottom: 0
+		left: 0
+		transform: translate(-4px, 40%)
+		background-color: rgba($purple, 0.1)
+		width: 110%
+		height: 48px
 
 // ---------------------------------------------------------------- Figures
 

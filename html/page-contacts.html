@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="../fonts/stylesheet.css">
 	<link rel="stylesheet" href="../css/main.css">
-	<title>template</title>
+	<title>page-contacts</title>
 </head>
 <body>
 	<!-- header start -->
@@ -67,11 +67,62 @@
 
 	<main>
 
-		<section class="">
+		<section class="contacts">
 			<div class="wrapper">
+				<div class="breadcrumbs"><a href="./page-home.html">Главная</a>   →   Контакты</div>
+				<h1 class="page_title">Контакты</h1>
+				<ul>
+					<li class="address">
+						<img src="../img/icon_map.svg" alt="icon_map" class="img-svg">
+						<div>Украина, Одесса, Шампанский переулок, 9</div>
+					</li>
+					<li class="phones">
+						<img src="../img/icon_phone.svg" alt="icon_phone" class="img-svg">
+						<div>
+							<div>
+								<a href="tel:">+38 048 728 07 88</a>
+								<span>Ресепшн</span>
+							</div>
+							<div>
+								<a href="tel:">+38 095 052 27 37</a>
+							</div>
+							<div>
+								<a href="tel:">+38 048 772 00 52</a>
+							</div>
+						</div>
+					</li>
+					<li class="email">
+						<img src="../img/icon_gmail.svg" alt="icon_gmail" class="img-svg">
+						<div>
+							<a href="mailto:medspaod@gmail.com">medspaod@gmail.com</a>
+						</div>
+					</li>
+					<li class="socials">
+						<div>
+							<a href="#">
+								<img src="../img/icon_telegram.svg" alt="icon_telegram" class="img-svg">
+							</a>
+							<a href="#">
+								<img src="../img/icon_facebook.svg" alt="icon_facebook" class="img-svg">
+							</a>
+							<a href="#">
+								<img src="../img/icon_instagram.svg" alt="icon_instagram" class="img-svg">
+							</a>
+							<a href="#">
+								<img src="../img/icon_youtube.svg" alt="icon_youtube" class="img-svg">
+							</a>
+						</div>
+					</li>
+				</ul>
 
+				<form>
+					<h2>Напишите нам</h2>
+					(form here)
+				</form>
 			</div>
 		</section>
+
+		<section id="map" class="map"></section>
 
 		<!-- footer start -->
 		<footer>
@@ -173,7 +224,26 @@
 	<script>
 		window.addEventListener('load', () => {
 
-		});
+		// Use GMaps
+		function initMap() {
+				const coordinates = {
+					lat: 46.45023843913522,
+					lng: 30.750597798515926
+				};
+				const map = new google.maps.Map(document.querySelector("#map"), {
+					center: coordinates,
+					zoom: 17,
+					disableDefaultUI: false,
+					scrollwheel: false,
+				});
+				const marker = new google.maps.Marker({
+					position: coordinates,
+					map: map,
+					// icon: '<?= get_field('marker'); ?>'
+				});
+			}
 	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZmmcpk7hgCJk6xk54yD9G-A0-HaccLuQ&callback=initMap" defer></script>
 </body>
 </html>
