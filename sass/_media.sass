@@ -1,17 +1,501 @@
 
 // @media (max-width: 1600px)
 
-// @media (max-width: 1440px)
+@media (max-width: 1440px)
+	.bg > img
+		width: 120%
+	h1
+		font-size: 60px
+	h2
+		font-size: 38px
+	h3
+		font-size: 28px
 
-// @media (max-width: 1280px)
+	aside .aside_contacts
+		.phone
+			font-size: 20px
+		.languages li
+			padding: 0 12px
+	footer
+		padding-top: 96px
+		.copyright
+			padding: 36px 0
 
-// @media (max-width: 1024px)
+	section.program,
+	section.director,
+	section.pros,
+	section.reviews,
+	section.partners,
+	section.info
+		margin-top: 96px
+
+	section.services
+		padding-top: 96px
+		.cards
+			margin-top: 36px
+		.card .bg img
+			width: 120%
+	section.director .wrapper
+		padding: 0
+		.bg > img
+			width: 100%
+		.info
+			padding-left: 48px
+			h1
+				font-size: 50px
+			p
+				font-size: 20px
+				&:first-of-type
+					margin-top: 36px
+			.socials
+				margin-top: 36px
+				a svg
+					width: 24px
+					height: 24px
+	section.info
+		height: 640px
+		> img
+			width: 100%
+		.wrapper
+			padding: 96px 315px 120px 72px
+	section.contacts
+		height: auto
+		li
+			font-size: 30px
+			&.socials > div a svg
+				width: 30px
+				height: 30px
+
+@media (max-width: 1280px)
+	.bg > img
+		width: 130%
+	h3
+		font-size: 24px
+
+	aside
+		padding: 24px
+		.aside_contacts .phone > a
+			.fa-telegram-plane
+				font-size: 16px
+				margin-right: 4px
+			.fa-chevron-down
+				margin-left: 4px
+	.submenus
+		width: 36vw
+		padding: 120px 48px 0 48px
+		ul li
+			font-size: 20px
+
+	section.services .card
+		.bg
+			img
+				width: 130%
+			.buttons
+				padding: 18px
+				> *
+					font-size: 16px
+		span
+			font-size: 20px
+			i
+				font-size: 16px
+				margin-right: 6px
+	section.director .wrapper
+		.bg > img
+			top: 0
+			transform: translate(-50%, 2%)
+	section.partners
+		.card
+			width: calc( 100% / 3 - 24px )
+			margin: 12px
+		.bg > img
+			width: 110%
+	section.info .wrapper
+		padding: 96px 221px 0 24px
+	section.contacts li
+		font-size: 24px
+		> svg
+			width: 30px
+			height: 30px
+
+@media (max-width: 1024px)
+	h1
+		font-size: 54px
+	h2
+		font-size: 32px
+
+	aside
+		display: none
+	header, .hambMenu
+		display: block
+	main
+		padding: 0
+	body
+		padding-top: 72px
+
+	footer
+		padding-top: 72px
+		nav
+			flex-wrap: wrap
+			padding-bottom: 0
+			.footer_block
+				width: 47%
+				margin: 0 0 36px
+				padding-right: 72px
+				&:not(:first-child)
+					margin-left: 0
+
+	section.banner
+		height: calc( 100vh - 72px )
+		.slide
+			width: 100vw
+	section.services .card .bg img
+		width: 135%
+	section.program
+		height: 470px
+	section.director .wrapper
+		height: 600px
+		.bg
+			width: 47%
+		.info
+			width: 53%
+			h1
+				font-size: 43px
+	section.pros .cards
+		flex-wrap: wrap
+		.card
+			width: 50%
+			> img
+				width: 102%
+	section.info p
+		font-size: 20px
+	section.contacts
+		margin-top: 96px
 
 @media (max-width: 768px)
-	.mt-180, .mt-144
+	h1
+		font-size: 40px
+	h3
+		font-size: 20px
+
+	footer .copyright
+		span:nth-of-type(2)
+			width: 50%
+			margin-left: 0
+		span:nth-of-type(3)
+			margin-left: 30px
+
+	section.program,
+	section.director,
+	section.pros,
+	section.reviews,
+	section.partners,
+	section.info
 		margin-top: 72px
 
-	header
-		display: block
+	section.banner
+		height: 600px
+		.wrapper .openVideo svg
+			width: 36px
+	section.services
+		padding-top: 72px
+		.cards
+			margin: 12px -18px 0
+		.card
+			margin: 18px
+			width: calc( 100% / 2 - 36px)
+			.bg
+				height: 240px
+				.buttons
+					flex-direction: column
+					> *
+						width: 80%
+						&:last-child
+							margin-left: 0
+							margin-top: 18px
+	section.program
+		height: 360px
+		h2
+			width: 60%
+	section.director .wrapper
+		flex-direction: column
+		height: auto
+		.bg
+			width: 100%
+			height: 540px
+			> img
+				width: 60%
+		.info
+			width: 100%
+			padding: 0
+			margin-top: 24px
+			.socials
+				justify-content: flex-start
+				a:not(:first-child)
+					margin-left: 24px
+	section.pros .cards .card
+		height: 360px
+		padding: 24px
+	section.info
+		height: 480px
+		> img
+			width: 120%
+		.wrapper
+			padding: 60px 221px 0 24px
+			p
+				font-size: 18px
+			p:first-of-type, p:not(:first-of-type)
+				margin-top: 24px
+			a
+				margin-top: 36px
+				font-size: 14px
+	section.partners .card
+		height: 110px
+	section.reviews button.slick-arrow
+		top: 10px
+	section.contacts
+		margin-top: 72px
+		li.socials > div
+			margin-top: 0
+		.content
+			flex-direction: column
+			ul
+				width: 100%
+				padding: 0
+			form
+				width: 100%
+				margin-top: 48px
+	section#map
+		margin-top: 0
 
-// @media (max-width: 480px)
+@media (max-width: 480px)
+	h1
+		font-size: 30px
+	h2
+		font-size: 24px
+	h3
+		font-size: 18px
+
+	main
+		overflow: hidden
+	.wrapper
+		width: 90%
+
+	section.program,
+	section.director,
+	section.pros,
+	section.reviews,
+	section.partners,
+	section.info
+		margin-top: 48px
+
+	header .buttons button svg
+		width: 24px
+		height: 24px
+	footer
+		nav
+			padding-bottom: 36px
+			.footer_block
+				width: 100%
+				margin-bottom: 0
+				&.contact_info
+					order: 4
+					margin-top: 36px
+					padding-top: 36px
+					border-top: 1px solid $cream
+					h4
+						display: none
+					ul
+						margin-top: 0
+				&:nth-of-type(2)
+					margin-top: 0
+					width: 100%
+					order: 1
+				&:nth-of-type(3)
+					width: 100%
+					margin-left: 0
+					margin-top: 30px
+					order: 2
+				&:nth-of-type(4)
+					width: 100%
+					margin-left: 0
+					margin-top: 30px
+					order: 3
+				&.active
+					h4 i
+						transform: rotate(180deg)
+					&:not(.contact_info) ul
+						max-height: 1000px
+						opacity: 1
+						visibility: visible
+						margin-top: 18px
+			h4
+				font-size: 20px
+				display: flex
+				justify-content: space-between
+				align-items: center
+				cursor: pointer
+				transition: all 0.2s linear
+				&:hover
+					color: $purple
+					i
+						color: $purple
+				i
+					display: block
+					font-size: 12px
+					font-weight: 200
+					color: $gm
+					transition: all 0.2s linear
+					transform: rotate(0)
+			.footer_block:not(.contact_info) ul
+				padding-right: 48px
+				transition: all 0.2s linear
+				max-height: 0
+				opacity: 0
+				visibility: hidden
+				margin-top: 0
+		.copyright
+			flex-direction: column
+			span
+				font-size: 14px
+			span:nth-of-type(1)
+				width: 100%
+			span:nth-of-type(2)
+				width: 100%
+				margin-left: 0
+				margin-top: 18px
+			span:nth-of-type(3)
+				width: 100%
+				margin-left: 0
+				margin-top: 36px
+
+	section.banner
+		height: 480px
+		button.slick-arrow:nth-of-type(1)
+			right: 96px
+		button.slick-arrow:nth-of-type(2)
+			right: 36px
+		.wrapper
+			h3 .fas
+				font-size: 8px
+			h1
+				margin: 8px 0 0 18px
+			.bottom
+				display: none
+	section.services
+		padding-top: 48px
+		.cards
+			margin: 36px 0 0
+		.card
+			width: 100%
+			&:not(:first-child)
+				margin-top: 36px
+			.bg
+				height: 190px
+				img
+					width: 110%
+			&.all
+				height: 120px
+				.bg
+					height: 100%
+					padding: 24px
+					h2
+						margin-top: auto
+						display: flex
+						justify-content: space-between
+						align-items: flex-end
+	section.program
+		width: 110vw
+		height: 406px
+		.wrapper
+			padding: 36px 0
+	section.director .wrapper
+		.bg
+			height: 340px
+		.info
+			h1
+				font-size: 30px
+			span
+				font-size: 16px
+			p
+				font-size: 18px
+			.socials
+				flex-direction: column
+				a
+					flex-direction: row
+					span
+						margin-top: 0
+						margin-left: 18px
+					&:not(:first-child)
+						margin-left: 0
+						margin-top: 18px
+	section.pros
+		.cards
+			.card
+				height: 240px
+			.text
+				svg
+					width: 48px
+					height: 48px
+				h4
+					font-size: 20px
+				p
+					line-height: 1.2
+					font-size: 16px
+	section.reviews
+		.cards
+			margin-bottom: 18px
+		.slick-dots
+			position: absolute
+			bottom: 0
+			left: 0
+			li
+				color: $tsp
+				width: 8px
+				height: 8px
+				border-radius: 100%
+				background-color: $gm
+				transition: all 0.2s linear
+				opacity: 0.3
+				&:hover, &.slick-active
+					opacity: 1
+				&:not(:first-child)
+					margin-left: 8px
+	section.partners
+		.cards
+			margin: 36px 0 0
+			.card
+				display: inline-block
+				width: 42vw
+				margin: 0 4px
+	section.info
+		height: 610px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		> img
+			width: auto
+			height: 100%
+			left: 40%
+		.wrapper
+			padding: 72px 0
+	section.contacts
+		li
+			font-size: 20px
+			> svg
+				width: 24px
+				height: 24px
+				margin-right: 24px
+			span
+				font-size: 12px
+			&.email svg
+				margin-top: 0
+			&.socials > div
+				padding-left: 48px
+				a svg
+					width: 24px
+					height: 24px
+		.content
+			margin-top: 36px
+			form
+				width: 100vw
+				margin-left: -5vw

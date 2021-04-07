@@ -37,6 +37,7 @@ section.banner
 			text-transform: uppercase
 			position: relative
 			width: max-content
+			font-weight: normal
 			.fas
 				position: absolute
 				right: 0
@@ -99,12 +100,13 @@ section.services
 				.buttons
 					opacity: 1
 					visibility: visible
-			h3
-				padding-left: 72px
-				a
-					text-decoration-color: $purple
-			span
-				padding-left: 72px
+			h3 a
+				text-decoration-color: $purple
+			@media (min-width: 1280px)
+				h3
+					padding-left: 72px
+				span
+					padding-left: 72px
 		&.all .bg
 			background-color: $cream
 			padding: 0 36px 72px 36px
@@ -346,7 +348,7 @@ section.reviews
 section.partners
 	margin-top: 180px
 	.cards
-		display: flex
+		display: inline-flex
 		flex-wrap: wrap
 		margin: 54px -18px 0
 	.card
@@ -378,9 +380,13 @@ section.info
 section.contacts
 	margin-top: 120px
 	height: 100vh
-	ul
+	padding-bottom: 144px
+	.content
+		display: flex
 		margin-top: 72px
+	ul
 		width: 50%
+		padding-right: 72px
 	li
 		font-size: 36px
 		display: flex
@@ -422,15 +428,17 @@ section.contacts
 					opacity: 1
 					fill: $purple
 	form
-		position: absolute
-		z-index: 100
-		right: 0
-		bottom: 0
-		transform: translate(0, 72px)
+		width: 50%
 		box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.12)
 		padding: 72px
+		margin-bottom: -144px
+		position: relative
+		z-index: 100
+		background-color: $w
 section#map
 	height: 480px
+	margin-top: -72px
+	z-index: 0
 section.workers
 	margin-top: 120px
 	p
