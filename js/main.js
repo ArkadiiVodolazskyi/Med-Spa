@@ -70,5 +70,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("load", () => {
 
+  // Globals
+  const overlay = document.querySelector('#overlay');
+
+  // Open/close submenus
+  (function() {
+    const navMenus = document.querySelectorAll('aside nav li');
+    const submenuWrapper = document.querySelector('.submenus');
+    const subMenus = submenuWrapper.querySelectorAll('.submenu');
+    const closeSubmenuWrapper = submenuWrapper.querySelector('.closeSubmenus');
+
+    if (navMenus.length) {
+      for (let i = 0; i < navMenus.length; i++) {
+        navMenus[i].addEventListener('click', () => {
+          for (let i = 0; i < subMenus.length; i++) {
+            subMenus[i].classList.remove('active');
+          }
+          subMenus[i].classList.add('active');
+          submenuWrapper.classList.add('active');
+          overlay.classList.add('active');
+          overlay.addEventListener('click', () => {
+            submenuWrapper.classList.remove('active');
+            for (let i = 0; i < subMenus.length; i++) {
+              subMenus[i].classList.remove('active');
+            }
+            overlay.classList.remove('active');
+          });
+        });
+      }
+      closeSubmenuWrapper.addEventListener('click', () => {
+        submenuWrapper.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    }
+  })();
 
 });

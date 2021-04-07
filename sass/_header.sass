@@ -1,11 +1,32 @@
+
+#overlay
+	position: fixed
+	z-index: 150
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	width: 100vw
+	height: 100vh
+	background-color: $tsp
+	backdrop-filter: blur(15.1px)
+	-webkit-backdrop-filter: blur(15.1px)
+	cursor: pointer
+	transition: all 0.2s linear
+	opacity: 0
+	visibility: hidden
+	&.active
+		opacity: 1
+		visibility: visible
 aside
 	width: 18.5vw
 	height: 100vh
 	position: fixed
-	z-index: 100
+	z-index: 400
 	left: 0
 	top: 0
 	padding: 36px 36px 36px
+	background-color: $w
 	box-shadow: 6px 0 18px 0 rgba($b, 0.06)
 	text-align: center
 	color: $gd
@@ -27,15 +48,15 @@ aside
 		margin-top: 60px
 		li
 			display: block
+			font-size: 16px
+			font-weight: 500
+			text-transform: uppercase
+			letter-spacing: 0.96px
+			cursor: pointer
 			&:not(:first-child)
 				margin-top: 30px
-			&:hover a
+			&:hover
 				color: $purple
-			a
-				font-size: 16px
-				font-weight: 500
-				text-transform: uppercase
-				letter-spacing: 0.96px
 	.aside_contacts
 		margin-top: auto
 		.phone
@@ -95,6 +116,50 @@ aside
 					pointer-events: none
 				&:hover a
 					color: $purple
+
+.submenus
+	width: 43vw
+	height: 100vh
+	position: fixed
+	z-index: 200
+	left: 18.5vw
+	top: 0
+	bottom: 0
+	padding: 144px 144px 0 72px
+	background-color: $w
+	text-align: left
+	transition: all 0.2s linear
+	opacity: 0
+	visibility: hidden
+	transform: translateX(-30%)
+	&.active
+		opacity: 1
+		visibility: visible
+		transform: translateX(0)
+	.submenu
+		transition: all 0.2s linear
+		display: none
+		&.active
+			display: block
+	ul
+		margin-top: 72px
+		li
+			font-size: 24px
+			&:not(:first-child)
+				margin-top: 24px
+			&:hover a
+				color: $purple
+	.closeSubmenus
+		position: absolute
+		right: 48px
+		top: 48px
+		cursor: pointer
+		svg
+			stroke: $gm
+			stroke-width: 2px
+		&:hover svg
+			stroke: $purple
+
 header
 	width: 100%
 	display: none

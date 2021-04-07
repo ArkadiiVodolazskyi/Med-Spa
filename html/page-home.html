@@ -10,6 +10,9 @@
 	<title>page-home</title>
 </head>
 <body>
+
+	<div id="overlay"></div>
+
 	<!-- header start -->
 	<header>
 		<div class="wrapper">
@@ -27,13 +30,21 @@
 			Запись на прием
 		</button>
 
-		<nav>
+		<!-- <nav>
 			<li><a href="#">Процедуры лицо</a></li>
 			<li><a href="#">Процедуры тело</a></li>
 			<li><a href="#">Подарочные карты</a></li>
 			<li><a href="#">О нас</a></li>
 			<li><a href="#">Прайс-лист</a></li>
 			<li><a href="#">Контакты</a></li>
+		</nav> -->
+		<nav>
+			<li>Процедуры лицо</li>
+			<li>Процедуры тело</li>
+			<li>Подарочные карты</li>
+			<li>О нас</li>
+			<li>Прайс-лист</li>
+			<li>Контакты</li>
 		</nav>
 
 		<div class="aside_contacts">
@@ -65,38 +76,135 @@
 		</div>
 	</aside>
 
+	<div class="submenus">
+		<button class="closeSubmenus">
+			<img src="../img/cross.svg" alt="cross" class="img-svg">
+		</button>
+		<div class="submenu">
+			<h2>Процедуры лицо</h2>
+			<ul>
+				<li><a href="">SMAS лифтинг Ultraformer</a></li>
+				<li><a href="">Всезенонная лазерная шлифовка LaseMD</a></li>
+				<li><a href="">Вакуумный гидропилинг Aquapure</a></li>
+				<li><a href="">Фотоомоложение Lumenis M22</a></li>
+				<li><a href="">Лазерное омоложение LaseMD</a></li>
+				<li><a href="">Аквапилинг Aquapure</a></li>
+				<li><a href="">Инъекции красоты</a></li>
+			</ul>
+		</div>
+		<div class="submenu">
+			<h2>Процедуры тело</h2>
+			<ul>
+				<li><a href="">SMAS лифтинг Ultraformer</a></li>
+				<li><a href="">Всезенонная лазерная шлифовка LaseMD</a></li>
+				<li><a href="">Вакуумный гидропилинг Aquapure</a></li>
+				<li><a href="">Фотоомоложение Lumenis M22</a></li>
+				<li><a href="">Лазерное омоложение LaseMD</a></li>
+				<li><a href="">Аквапилинг Aquapure</a></li>
+				<li><a href="">Инъекции красоты</a></li>
+			</ul>
+		</div>
+		<div class="submenu">
+			<h2>Подарочные карты</h2>
+			<ul>
+				<li><a href="">SMAS лифтинг Ultraformer</a></li>
+				<li><a href="">Всезенонная лазерная шлифовка LaseMD</a></li>
+				<li><a href="">Вакуумный гидропилинг Aquapure</a></li>
+				<li><a href="">Фотоомоложение Lumenis M22</a></li>
+				<li><a href="">Лазерное омоложение LaseMD</a></li>
+				<li><a href="">Аквапилинг Aquapure</a></li>
+				<li><a href="">Инъекции красоты</a></li>
+			</ul>
+		</div>
+		<div class="submenu">
+			<h2>О нас</h2>
+			<ul>
+				<li><a href="">SMAS лифтинг Ultraformer</a></li>
+				<li><a href="">Всезенонная лазерная шлифовка LaseMD</a></li>
+				<li><a href="">Вакуумный гидропилинг Aquapure</a></li>
+				<li><a href="">Фотоомоложение Lumenis M22</a></li>
+				<li><a href="">Лазерное омоложение LaseMD</a></li>
+				<li><a href="">Аквапилинг Aquapure</a></li>
+				<li><a href="">Инъекции красоты</a></li>
+			</ul>
+		</div>
+		<div class="submenu">
+			<h2>Прайс-лист</h2>
+			<ul>
+				<li><a href="">SMAS лифтинг Ultraformer</a></li>
+				<li><a href="">Всезенонная лазерная шлифовка LaseMD</a></li>
+				<li><a href="">Вакуумный гидропилинг Aquapure</a></li>
+				<li><a href="">Фотоомоложение Lumenis M22</a></li>
+				<li><a href="">Лазерное омоложение LaseMD</a></li>
+				<li><a href="">Аквапилинг Aquapure</a></li>
+				<li><a href="">Инъекции красоты</a></li>
+			</ul>
+		</div>
+		<div class="submenu">
+			<h2>Контакты</h2>
+			<ul>
+				<li><a href="">SMAS лифтинг Ultraformer</a></li>
+				<li><a href="">Всезенонная лазерная шлифовка LaseMD</a></li>
+				<li><a href="">Вакуумный гидропилинг Aquapure</a></li>
+				<li><a href="">Фотоомоложение Lumenis M22</a></li>
+				<li><a href="">Лазерное омоложение LaseMD</a></li>
+				<li><a href="">Аквапилинг Aquapure</a></li>
+				<li><a href="">Инъекции красоты</a></li>
+			</ul>
+		</div>
+	</div>
+
 	<main>
 
-		<section class="banner bg b-overlay">
-			<img src="../img/home_banner.png" alt="banner_img" class="bannerImg">
-			<div class="wrapper">
-				<h3>
-					Med Spa Vodoley
-					<i class="fas fa-plus"></i>
-				</h3>
-				<h1>
-					Пространство<br>
-					здоровья и красоты
-				</h1>
-				<button class="openVideo">
-					<img src="../img/icon_play.svg" alt="icon_play" class="img-svg">
-					Видео о нас
-				</button>
-				<div class="bottom">
-					<a href="#services">
-						<img src="../img/icon_mouse.svg" alt="icon_play" class="img-svg">
-						Наши услуги
-					</a>
-					<div class="buttons">
-						<button class="bannerPrev">
-							<img src="../img/arrow.svg" alt="bannerPrev" class="img-svg">
-						</button>
-						<button class="bannerNext">
-							<img src="../img/arrow.svg" alt="bannerNext" class="img-svg">
-						</button>
+		<section class="banner">
+
+			<div class="slide bg b-overlay">
+				<img src="../img/home_banner.png" alt="banner_img" class="bannerImg">
+				<div class="wrapper">
+					<h3>
+						Med Spa Vodoley
+						<i class="fas fa-plus"></i>
+					</h3>
+					<h1>
+						Пространство<br>
+						здоровья и красоты
+					</h1>
+					<button class="openVideo">
+						<img src="../img/icon_play.svg" alt="icon_play" class="img-svg">
+						Видео о нас
+					</button>
+					<div class="bottom">
+						<a href="#services">
+							<img src="../img/icon_mouse.svg" alt="icon_play" class="img-svg">
+							Наши услуги
+						</a>
 					</div>
 				</div>
 			</div>
+			<div class="slide bg b-overlay">
+				<img src="../img/home_banner.png" alt="banner_img" class="bannerImg">
+				<div class="wrapper">
+					<h3>
+						Med Spa Vodoley
+						<i class="fas fa-plus"></i>
+					</h3>
+					<h1>
+						Пространство<br>
+						здоровья и красоты
+					</h1>
+					<button class="openVideo">
+						<img src="../img/icon_play.svg" alt="icon_play" class="img-svg">
+						Видео о нас
+					</button>
+					<div class="bottom">
+						<a href="#services">
+							<img src="../img/icon_mouse.svg" alt="icon_play" class="img-svg">
+							Наши услуги
+						</a>
+					</div>
+				</div>
+			</div>
+
 		</section>
 
 		<section id="services" class="services">
@@ -464,11 +572,36 @@
 	<script>
 		window.addEventListener('load', () => {
 			// Bannners change
-			(function() {
-				const bannerPrev = document.querySelector('section.banner .bannerPrev');
-				const bannerNext = document.querySelector('section.banner .bannerNext');
-				const bannerSlides = document.querySelectorAll('section.banner .bannerImg');
-			})();
+			// (function() {
+			// 	const bannerPrev = document.querySelector('section.banner .bannerPrev');
+			// 	const bannerNext = document.querySelector('section.banner .bannerNext');
+			// 	const bannerSlides = document.querySelectorAll('section.banner .bannerImg');
+			// })();
+
+			$("section.banner").not(".slick-initialized").slick({
+				arrows: true,
+				draggable: true,
+				touchThreshold: 300,
+				focusOnSelect: false,
+				infinite: false,
+				autoplay: false,
+				dots: false,
+				variableWidth: true,
+				vertical: false,
+				verticalSwiping: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				prevArrow: `
+					<button type="button">
+						<i class="fas fa-chevron-left"></i>
+					</button>
+				`,
+				nextArrow: `
+					<button type="button">
+						<i class="fas fa-chevron-right"></i>
+					</button>
+				`,
+			});
 
 			$("section.reviews .cards").not(".slick-initialized").slick({
 				arrows: true,
