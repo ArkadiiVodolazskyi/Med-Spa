@@ -1,4 +1,26 @@
 
+// Init AOS
+AOS.init({
+  // Global settings:
+  disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // was 120 - offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: true, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+});
+
 document.addEventListener("DOMContentLoaded", () => {
 
   // Use .img-svg on image to remove it with svg version
@@ -31,27 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
   })();
-
-  // Initialize wow.js
-  // (function () {
-  //   wow = new WOW({
-  //     boxClass: "wow",
-  //     animateClass: "animated",
-  //     offset: 0,
-  //     mobile: true,
-  //     live: true,
-  //   });
-  //   wow.init();
-
-  //   // Change duration to all the elements
-  //   const wows = document.querySelectorAll(".wow");
-
-  //   if (wows.length) {
-  //     for (let i = 0; i < wows.length; i++) {
-  //       wows[i].setAttribute("data-wow-duration", "0.5s");
-  //     }
-  //   }
-  // })();
 
   // Fix masked input cursor
   $.fn.setCursorPosition = function(pos) {
@@ -178,12 +179,52 @@ window.addEventListener("load", () => {
     }
   })();
 
-});
+  // Open/close modalForm
+  (function() {
+    const modalForm = document.querySelector('.modalForm');
+    const openForms = document.querySelectorAll('.openForm');
+    const closeForm = document.querySelector('.closeForm');
 
-console.log('scroll');
+    if (modalForm) {
+      for (let i = 0; i < openForms.length; i++) {
+        openForms[i].addEventListener('click', () => {
+          modalForm.classList.add('active');
+          overlay.classList.add('active');
+          overlay.addEventListener('click', () => {
+            modalForm.classList.remove('active');
+            overlay.classList.remove('active');
+          })
+        });
+      }
+      closeForm.addEventListener('click', () => {
+        modalForm.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    }
+  })();
 
-// Hide header on scroll
-window.addEventListener('scroll', () => {
-  console.log('scroll');
-  console.log(window.scrollY);
+  // Open/close modalVideo
+  (function() {
+    const modalForm = document.querySelector('.modalVideo');
+    const openForms = document.querySelectorAll('.openVideo');
+    const closeForm = document.querySelector('.closeVideo');
+
+    if (modalForm) {
+      for (let i = 0; i < openForms.length; i++) {
+        openForms[i].addEventListener('click', () => {
+          modalForm.classList.add('active');
+          overlay.classList.add('active');
+          overlay.addEventListener('click', () => {
+            modalForm.classList.remove('active');
+            overlay.classList.remove('active');
+          })
+        });
+      }
+      closeForm.addEventListener('click', () => {
+        modalForm.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    }
+  })();
+
 });

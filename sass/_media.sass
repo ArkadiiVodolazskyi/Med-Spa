@@ -26,8 +26,18 @@
 	section.pros,
 	section.reviews,
 	section.partners,
-	section.info
+	section.info,
+	section.photos,
+	section.certs,
+	section.video_banner,
+	section.indications,
+	section.results,
+	section.workers,
+	section.prices,
+	section.faq
 		margin-top: 96px
+	section.text
+		padding-top: 96px
 
 	section.services
 		padding-top: 96px
@@ -65,6 +75,19 @@
 			&.socials > div a svg
 				width: 30px
 				height: 30px
+	section.workers
+		p
+			font-size: 30px
+		.card
+			width: calc( 100% / 3 - 24px)
+			.bg > img
+				width: 100%
+	section.info_service
+		height: 680px
+		> img
+			width: auto
+		.wrapper
+			padding: 96px 315px 96px 0
 
 @media (max-width: 1280px)
 	.bg > img
@@ -85,6 +108,8 @@
 		padding: 120px 48px 0 48px
 		ul li
 			font-size: 20px
+	.modalForm
+		width: 50vw
 
 	section.services .card
 		.bg
@@ -116,6 +141,36 @@
 		> svg
 			width: 30px
 			height: 30px
+	section.text p
+		width: 100%
+	section.photos .gallery
+		margin-top: 36px
+	section.certs
+		.cards
+			margin: 18px -18px 0
+		.card
+			margin: 18px
+			padding: 36px 72px 36px 36px
+			width: calc( 100% / 2 - 36px)
+			height: 270px
+	section.signup .bg
+		.center
+			font-size: 30px
+			top: 40%
+		.bottom
+			padding: 0 36px
+	section.info_service > img
+		transform: translate(72px, -50%)
+	section.indications .text
+		margin-top: 36px
+	section.workers.participants .card
+		width: 23vw
+	section.prices table
+		margin-top: 36px
+		td:nth-child(2)
+			padding: 0 24px
+	section.faq .questions
+		margin-top: 36px
 
 @media (max-width: 1024px)
 	h1
@@ -131,6 +186,9 @@
 		padding: 0
 	body
 		padding-top: 72px
+	.modalForm
+		left: 50vw
+		width: 60vw
 
 	footer
 		padding-top: 72px
@@ -165,11 +223,41 @@
 		.card
 			width: 50%
 			> img
-				width: 102%
+				width: 110%
 	section.info p
 		font-size: 20px
 	section.contacts
 		margin-top: 96px
+	section.workers
+		margin-top: 72px
+		p
+			margin-top: 36px
+		.cards
+			margin-top: 24px
+	section.service_banner
+		.service_info, .wrapper .bottom
+			margin-top: 0
+	section.indications .text
+		.left p
+			font-size: 20px
+		.right
+			h2
+				font-size: 27px
+			h4
+				font-size: 20px
+			ul
+				margin-top: 24px
+			ul:not(:last-of-type)
+				margin: 24px 0 36px
+	section.results .images img
+		width: 44vw
+	section.workers.participants .card
+		width: 28vw
+	section.prices td:nth-child(2)
+		.actual_price
+			font-size: 24px
+		.old_price
+			font-size: 20px
 
 @media (max-width: 768px)
 	h1
@@ -177,6 +265,8 @@
 	h3
 		font-size: 20px
 
+	.modalForm
+		width: 90vw
 	footer .copyright
 		span:nth-of-type(2)
 			width: 50%
@@ -189,7 +279,12 @@
 	section.pros,
 	section.reviews,
 	section.partners,
-	section.info
+	section.info,
+	section.photos,
+	section.certs,
+	section.results,
+	section.prices,
+	section.video_banner
 		margin-top: 72px
 
 	section.banner
@@ -266,6 +361,120 @@
 				margin-top: 48px
 	section#map
 		margin-top: 0
+	section.workers
+		p
+			font-size: 24px
+		.cards
+			margin-top: 12px
+		.card
+			width: calc( 100% / 2 - 24px)
+			margin: 12px
+			h4
+				margin-top: 12px
+			p
+				margin-top: 6px
+				i
+					margin-right: 6px
+	section.banner
+		.wrapper
+			padding-top: 72px
+			p
+				font-size: 24px
+			.bottom
+				display: none
+	section.text
+		padding-top: 72px
+		p
+			font-size: 20px
+	section.photos .gallery a
+		width: calc( 100% / 2 - 4px)
+	section.certs
+		.cards
+			margin: 24px -12px 0
+		.card
+			padding: 24px
+			height: auto
+			margin: 12px
+			width: calc( 100% / 2 - 24px)
+			h2
+				font-size: 24px
+				margin-top: 12px
+			svg
+				width: 30px
+				height: 30px
+	section.director .wrapper
+		.bg
+			width: 70%
+			margin: 0 auto
+			height: 700px
+			> img
+				width: 100%
+			.center
+				top: 47%
+	section.signup .wrapper form.info
+		margin: 36px auto 0
+		padding: 48px 18px
+	section.info_service
+		height: auto
+		.wrapper
+			padding: 72px 0 300px
+		> img
+			width: 40%
+			height: auto
+			transform: translate(72px, 0)
+			top: unset
+			bottom: 0
+	section.indications .text
+		flex-direction: column
+		.left
+			width: 100%
+			margin: 0
+		.right
+			width: 100%
+			margin: 36px 0 0
+	section.results,
+	section.workers.participants,
+	section.service_reviews
+		.images, .cards
+			margin-bottom: 36px
+		.slick-dots
+			position: absolute
+			bottom: 0
+			left: 0
+			li
+				color: $tsp
+				width: 8px
+				height: 8px
+				border-radius: 100%
+				background-color: $gm
+				cursor: pointer
+				user-select: none
+				transition: all 0.2s linear
+				opacity: 0.3
+				&:hover, &.slick-active
+					opacity: 1
+				&:not(:first-child)
+					margin-left: 8px
+	section.workers.participants
+		.cards
+			margin-top: 36px
+		.card
+			width: 43vw
+			margin: 6px
+	section.prices table td
+		&:nth-child(1)
+			width: 50%
+		&:nth-child(2)
+			width: 50%
+			padding: 18px 0 18px 18px
+			div
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+			button
+				display: block
+		&:nth-child(3)
+			display: none
 
 @media (max-width: 480px)
 	h1
@@ -274,6 +483,9 @@
 		font-size: 24px
 	h3
 		font-size: 18px
+
+	.modalForm
+		width: 100vw
 
 	main
 		overflow: hidden
@@ -291,12 +503,15 @@
 	header .buttons button svg
 		width: 24px
 		height: 24px
+	.hambMenu nav .mainItem
+		width: 100%
 	footer
 		nav
 			padding-bottom: 36px
 			.footer_block
 				width: 100%
 				margin-bottom: 0
+				padding-right: 0
 				&.contact_info
 					order: 4
 					margin-top: 36px
@@ -328,24 +543,24 @@
 						opacity: 1
 						visibility: visible
 						margin-top: 18px
-			h4
-				font-size: 20px
-				display: flex
-				justify-content: space-between
-				align-items: center
-				cursor: pointer
-				transition: all 0.2s linear
-				&:hover
-					color: $purple
-					i
-						color: $purple
-				i
-					display: block
-					font-size: 12px
-					font-weight: 200
-					color: $gm
+				h4
+					font-size: 20px
+					display: flex
+					justify-content: space-between
+					align-items: center
+					cursor: pointer
 					transition: all 0.2s linear
-					transform: rotate(0)
+					&:hover
+						color: $purple
+						i
+							color: $purple
+					i
+						display: block
+						font-size: 12px
+						font-weight: 200
+						color: $gm
+						transition: all 0.2s linear
+						transform: rotate(0)
 			.footer_block:not(.contact_info) ul
 				padding-right: 48px
 				transition: all 0.2s linear
@@ -369,7 +584,7 @@
 				margin-top: 36px
 
 	section.banner
-		height: 480px
+		height: auto
 		button.slick-arrow:nth-of-type(1)
 			right: 96px
 		button.slick-arrow:nth-of-type(2)
@@ -444,6 +659,8 @@
 	section.reviews
 		.cards
 			margin-bottom: 18px
+		.card
+			width: 60vw
 		.slick-dots
 			position: absolute
 			bottom: 0
@@ -468,7 +685,7 @@
 				width: 42vw
 				margin: 0 4px
 	section.info
-		height: 610px
+		height: auto
 		display: flex
 		flex-direction: column
 		justify-content: center
@@ -499,3 +716,142 @@
 			form
 				width: 100vw
 				margin-left: -5vw
+	section.workers
+		p
+			font-size: 18px
+		.cards
+			margin: 24px -6px 0
+		.card
+			margin: 12px 6px
+			width: calc( 100% / 2 - 12px )
+			.bg
+				height: 50vw
+			h4
+				margin-top: 0
+				font-size: 18px
+				padding-right: 0
+			p
+				font-size: 15px
+				padding-right: 0
+	section.banner .wrapper p
+		font-size: 18px
+	section.text p
+		font-size: 18px
+	section.photos .gallery
+		display: inline-flex
+		margin-bottom: 54px
+		a
+			display: inline-block
+			width: 100vw
+		.slick-dots
+			position: absolute
+			bottom: 0
+			left: 0
+			padding: 0 18px
+			li
+				color: $tsp
+				width: 8px
+				height: 8px
+				border-radius: 100%
+				background-color: $gm
+				transition: all 0.2s linear
+				opacity: 0.3
+				&:hover, &.slick-active
+					opacity: 1
+				&:not(:first-child)
+					margin-left: 8px
+	section.certs
+		h1
+			width: 75%
+		.cards
+			margin: 24px 0 0
+		.card
+			width: 100%
+			margin: 0
+			padding: 18px 18px 24px
+			&:not(:first-child)
+				margin-top: 12px
+			svg
+				width: 24px
+				height: 24px
+			span
+				font-size: 15px
+	section.about_banner .wrapper
+		h1
+			margin: 8px 0 0 0
+		p
+			margin-top: 24px
+		.buttons_about .openForm
+			font-size: 16px
+			padding: 10px 24px 10px
+		.openVideo
+			text-indent: -50rem
+			color: $tsp !important
+			margin-left: 12px
+			svg
+				margin: 0
+		.service_info
+			margin-top: 30px
+			li
+				display: inline-flex
+				align-items: center
+				margin: 0 32px 18px 0
+	section.about_service:not(.signup) .wrapper
+		.bg
+			display: none
+		.info
+			margin-top: 0
+	section.video_banner
+		height: auto
+		&::after
+			background-image: linear-gradient(to left, rgba(237,237,238,0), rgba(237,237,238,0.2), rgba(237,237,238,0.3), rgba(237,237,238,0.4), #ededee, #ededee)
+		> img
+			width: auto
+			height: 100%
+		.wrapper
+			padding: 72px 0
+	section.signup .wrapper
+		.bg
+			width: 100%
+			height: 580px
+			> img
+				top: 50%
+				transform: translate(-50%, -50%)
+			.bottom
+				font-size: 16px
+				padding: 0 24px
+				bottom: 24px
+		form.info
+			width: 100vw
+			margin-left: -5vw
+	section.info_service
+		.wrapper
+			padding: 72px 0 300px
+		> img
+			width: 50%
+			height: auto
+	section.indications .text
+		.left p
+			font-size: 18px
+		.right
+			h2
+				font-size: 24px
+			h4
+				font-size: 18px
+			ul li
+				font-size: 16px
+	section.results p
+		margin-top: 18px
+		font-size: 18px
+	section.prices td:nth-child(1) p
+		font-size: 18px
+	section.faq .question
+		padding: 18px
+		.answer
+			padding-right: 0
+		h4
+			font-size: 18px
+			i
+				font-size: 24px
+		p
+			font-size: 16px

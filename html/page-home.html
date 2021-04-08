@@ -7,17 +7,32 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="../fonts/stylesheet.css">
 	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../js/libs/aos.css">
 	<title>page-home</title>
 </head>
 <body>
 
 	<div id="overlay"></div>
 
+	<div class="modalForm">
+		Form here
+		<button class="closeForm">
+			<img src="../img/cross.svg" alt="cross" class="img-svg">
+		</button>
+	</div>
+
+	<div class="modalVideo">
+		Video here
+		<button class="closeVideo">
+			<img src="../img/cross.svg" alt="cross" class="img-svg">
+		</button>
+	</div>
+
 	<!-- header start -->
 	<header>
 		<div class="wrapper">
-			<a href="#">
-				<img src="../img/logo.svg" alt="logo" class="img-svg native">
+			<a href="#" class="logo">
+				<img src="../img/logo_multicolored.svg" alt="logo" class="img-svg native">
 			</a>
 			<div class="buttons">
 				<button>
@@ -144,7 +159,7 @@
 
 	<aside>
 		<a href="#" class="logo">
-			<img src="../img/med_spa_logo.svg" alt="med_spa_logo" class="img-svg native">
+			<img src="../img/med_spa_logo_multicolored.svg" alt="med_spa_logo" class="img-svg native">
 		</a>
 
 		<button class="openForm">
@@ -327,7 +342,7 @@
 				</h1>
 				<div class="cards">
 
-					<div class="card">
+					<div class="card" data-aos="fade-up">
 						<div class="bg">
 							<img src="../img/card (1).png" alt="">
 							<div class="buttons">
@@ -692,6 +707,7 @@
 
 	<script src="../js/libs/jquery-3.5.1.min.js"></script>
 	<script src="../js/libs/slick.min.js"></script>
+	<script src="../js/libs/aos.js"></script>
 	<script src="../js/main.js"></script>
 
 	<script>
