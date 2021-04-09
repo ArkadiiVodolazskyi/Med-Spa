@@ -15,14 +15,38 @@
 	<div id="overlay"></div>
 
 	<div class="modalForm">
-		Form here
+		<form id="contactsForm">
+			<h2>Напишите нам</h2>
+			<div class="name">
+				<input type="text" id="name">
+				<label for="name">Ваше имя</label>
+			</div>
+			<div class="email">
+				<input type="email" id="email">
+				<label for="email">Электронная почта</label>
+			</div>
+			<div class="tel">
+				<input type="tel" id="tel">
+				<label for="tel">Номер телефона</label>
+			</div>
+			<div class="msg">
+				<textarea name="msg" id="msg"></textarea>
+				<label for="msg">Ваше сообщение</label>
+			</div>
+			<div class="submit">
+				<input type="submit" value="Отправить">
+				<span>
+					Нажимая «Отправить» я соглашаюсь с условиями <a href="#">политики конфиденциальности</a>
+				</span>
+			</div>
+		</form>
 		<button class="closeForm">
 			<img src="../img/cross.svg" alt="cross" class="img-svg">
 		</button>
 	</div>
 
 	<div class="modalVideo">
-		Video here
+		<iframe src="https://www.youtube.com/embed/MSkDGa9Ei4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<button class="closeVideo">
 			<img src="../img/cross.svg" alt="cross" class="img-svg">
 		</button>
@@ -31,7 +55,7 @@
 	<!-- header start -->
 	<header>
 		<div class="wrapper">
-			<a href="#" class="logo">
+			<a href="./page-home.html" class="logo">
 				<img src="../img/logo_multicolored.svg" alt="logo" class="img-svg native">
 			</a>
 			<div class="buttons">
@@ -158,7 +182,7 @@
 	<!-- header end -->
 
 	<aside>
-		<a href="#" class="logo">
+		<a href="./page-home.html" class="logo">
 			<img src="../img/med_spa_logo_multicolored.svg" alt="med_spa_logo" class="img-svg native">
 		</a>
 
@@ -342,11 +366,11 @@
 				</h1>
 				<div class="cards">
 
-					<div class="card" data-aos="fade-up">
+					<div class="card">
 						<div class="bg">
 							<img src="../img/card (1).png" alt="">
 							<div class="buttons">
-								<button>Запись на прием</button>
+								<button class="openForm">Запись на прием</button>
 								<a href="#">Подробнее об услуге</a>
 							</div>
 						</div>
@@ -363,7 +387,7 @@
 						<div class="bg">
 							<img src="../img/card (2).png" alt="">
 							<div class="buttons">
-								<button>Запись на прием</button>
+								<button class="openForm">Запись на прием</button>
 								<a href="#">Подробнее об услуге</a>
 							</div>
 						</div>
@@ -380,7 +404,7 @@
 						<div class="bg">
 							<img src="../img/card (1).png" alt="">
 							<div class="buttons">
-								<button>Запись на прием</button>
+								<button class="openForm">Запись на прием</button>
 								<a href="#">Подробнее об услуге</a>
 							</div>
 						</div>
@@ -397,7 +421,7 @@
 						<div class="bg">
 							<img src="../img/card (2).png" alt="">
 							<div class="buttons">
-								<button>Запись на прием</button>
+								<button class="openForm">Запись на прием</button>
 								<a href="#">Подробнее об услуге</a>
 							</div>
 						</div>
@@ -414,7 +438,7 @@
 						<div class="bg">
 							<img src="../img/card (1).png" alt="">
 							<div class="buttons">
-								<button>Запись на прием</button>
+								<button class="openForm">Запись на прием</button>
 								<a href="#">Подробнее об услуге</a>
 							</div>
 						</div>
@@ -431,7 +455,7 @@
 						<div class="bg">
 							<img src="../img/card (2).png" alt="">
 							<div class="buttons">
-								<button>Запись на прием</button>
+								<button class="openForm">Запись на прием</button>
 								<a href="#">Подробнее об услуге</a>
 							</div>
 						</div>
@@ -448,7 +472,7 @@
 						<div class="bg">
 							<img src="../img/card (1).png" alt="">
 							<div class="buttons">
-								<button>Запись на прием</button>
+								<button class="openForm">Запись на прием</button>
 								<a href="#">Подробнее об услуге</a>
 							</div>
 						</div>
@@ -482,7 +506,15 @@
 					<strong>программу</strong> по уходу<br>
 					за вашим телом и лицом
 				</h2>
-				<form>(form here)</form>
+				<form id="programForm">
+					<input type="tel" placeholder="Номер телефона">
+					<div>
+						<input type="submit" value="Получить программу">
+						<span>
+							Нажимая «Получить программу» я соглашаюсь с условиями <a href="#">политики конфиденциальности</a>
+						</span>
+					</div>
+				</form>
 			</div>
 		</section>
 
@@ -667,7 +699,7 @@
 							<li><a href="">Ультразвуковая липосакция</a></li>
 							<li><a href="">Ультраформер</a></li>
 							<li><a href="">Игольчатый радиоволновой лифтинг Инфини Лютроник</a></li>
-							<li><a href="">Лазерная эпиляция Люменис</a></li>
+							<li><a href="./single-service.html">Лазерная эпиляция Люменис</a></li>
 							<li><a href="">Коррекция и лифтинг тела Роболекс</a></li>
 							<li><a href="">Массаж</a></li>
 							<li><a href="">Гидромассаж</a></li>
@@ -680,11 +712,11 @@
 							<i class="fas fa-chevron-down"></i>
 						</h4>
 						<ul>
-							<li><a href="">О нас</a></li>
+							<li><a href="./page-about.html">О нас</a></li>
 							<li><a href="">Отзывы</a></li>
-							<li><a href="">Команда</a></li>
+							<li><a href="./page-workers.html">Команда</a></li>
 							<li><a href="">Сертификаты</a></li>
-							<li><a href="">Контакты</a></li>
+							<li><a href="./page-contacts.html">Контакты</a></li>
 							<li><a href="">Политика конфиденциальности</a></li>
 							<li><a href="">Условия пользования сайтом</a></li>
 						</ul>
@@ -708,6 +740,7 @@
 	<script src="../js/libs/jquery-3.5.1.min.js"></script>
 	<script src="../js/libs/slick.min.js"></script>
 	<script src="../js/libs/aos.js"></script>
+	<script src="../js/libs/jquery.maskedinput.min.js"></script>
 	<script src="../js/main.js"></script>
 
 	<script>

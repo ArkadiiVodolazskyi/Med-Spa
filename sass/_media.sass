@@ -75,6 +75,11 @@
 			&.socials > div a svg
 				width: 30px
 				height: 30px
+		#contactsForm > div.submit
+			flex-direction: column
+			span
+				width: 100%
+				margin: 24px 0 0 0
 	section.workers
 		p
 			font-size: 30px
@@ -108,8 +113,14 @@
 		padding: 120px 48px 0 48px
 		ul li
 			font-size: 20px
-	.modalForm
+	.modalForm,
+	.modalVideo
 		width: 50vw
+	#programForm > div
+		flex-direction: column
+		span
+			margin: 24px 0 0 0
+			width: 100%
 
 	section.services .card
 		.bg
@@ -171,6 +182,10 @@
 			padding: 0 24px
 	section.faq .questions
 		margin-top: 36px
+	section.contacts #contactsForm
+		padding: 48px
+		> div label
+			font-size: 14px
 
 @media (max-width: 1024px)
 	h1
@@ -189,6 +204,13 @@
 	.modalForm
 		left: 50vw
 		width: 60vw
+	.modalVideo
+		left: 50vw
+		width: 80vw
+		height: 60vw
+	#programForm
+		width: 60%
+		margin-top: 24px
 
 	footer
 		padding-top: 72px
@@ -209,7 +231,9 @@
 	section.services .card .bg img
 		width: 135%
 	section.program
-		height: 470px
+		height: 500px
+		h2
+			width: 60%
 	section.director .wrapper
 		height: 600px
 		.bg
@@ -228,6 +252,8 @@
 		font-size: 20px
 	section.contacts
 		margin-top: 96px
+		#contactsForm > div
+			margin-top: 24px
 	section.workers
 		margin-top: 72px
 		p
@@ -267,6 +293,9 @@
 
 	.modalForm
 		width: 90vw
+	.modalVideo
+		width: 100vw
+		height: 70vw
 	footer .copyright
 		span:nth-of-type(2)
 			width: 50%
@@ -308,9 +337,17 @@
 							margin-left: 0
 							margin-top: 18px
 	section.program
-		height: 360px
+		height: 420px
+		.wrapper
+			padding: 36px 0
 		h2
-			width: 60%
+			font-size: 27px
+		#programForm
+			input[type="tel"]
+				padding: 12px 0
+			input[type="submit"]
+				font-size: 16px
+				padding: 10px 24px
 	section.director .wrapper
 		flex-direction: column
 		height: auto
@@ -484,7 +521,8 @@
 	h3
 		font-size: 18px
 
-	.modalForm
+	.modalForm,
+	.modalVideo
 		width: 100vw
 
 	main
@@ -623,6 +661,16 @@
 		height: 406px
 		.wrapper
 			padding: 36px 0
+		h2
+			width: 70%
+		#programForm
+			width: 70%
+			margin-top: 12px
+			input[type="tel"]
+				padding: 8px 0
+			span
+				margin-top: 16px
+				width: 90%
 	section.director .wrapper
 		.bg
 			height: 340px

@@ -211,7 +211,7 @@ section.director
 			padding-left: 72px
 			display: flex
 			flex-direction: column
-			span
+			> span
 				margin-top: 18px
 				font-size: 20px
 				color: $gm
@@ -259,9 +259,11 @@ section.pros
 			flex-direction: column
 			justify-content: flex-end
 			padding: 0 36px 48px 36px
+			img
+				opacity: 0.8
 			&:hover
 				img
-					opacity: 0.7
+					opacity: 0.5
 				.text
 					> svg
 						opacity: 0
@@ -379,8 +381,8 @@ section.info
 			color: $purple
 section.contacts
 	margin-top: 120px
-	height: 100vh
-	padding-bottom: 144px
+	// height: 100vh
+	height: auto
 	.content
 		display: flex
 		margin-top: 72px
@@ -431,7 +433,6 @@ section.contacts
 		width: 50%
 		box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.12)
 		padding: 72px
-		margin-bottom: -144px
 		position: relative
 		z-index: 100
 		background-color: $w

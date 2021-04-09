@@ -1,25 +1,25 @@
 
 // Init AOS
-AOS.init({
-  // Global settings:
-  disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+// AOS.init({
+//   // Global settings:
+//   disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+//   startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+//   initClassName: 'aos-init', // class applied after initialization
+//   animatedClassName: 'aos-animate', // class applied on animation
+//   useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+//   disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+//   debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+//   throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // was 120 - offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: true, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-});
+//   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+//   offset: 120, // was 120 - offset (in px) from the original trigger point
+//   delay: 0, // values from 0 to 3000, with step 50ms
+//   duration: 400, // values from 0 to 3000, with step 50ms
+//   easing: 'ease', // default easing for AOS animations
+//   once: true, // whether animation should happen only once - while scrolling down
+//   mirror: false, // whether elements should animate out while scrolling past them
+//   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -227,4 +227,79 @@ window.addEventListener("load", () => {
     }
   })();
 
+  // Masked Input for #programForm
+  (function() {
+    const inputTels = document.querySelectorAll('input[type=tel]');
+
+    if (inputTels.length) {
+
+      $(inputTels).click(function() {
+        $(this).setCursorPosition(5);
+      }).mask(
+        "+38 (999) 999-9999",
+        {autoclear: false}
+      );
+
+      // Fix masked input cursor
+      $.fn.setCursorPosition = function(pos) {
+        if ($(this).get(0).setSelectionRange) {
+          $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+          var range = $(this).get(0).createTextRange();
+          range.collapse(true);
+          range.moveEnd('character', pos);
+          range.moveStart('character', pos);
+          range.select();
+        }
+      };
+
+    }
+  })();
+
+  // Labels animation
+  (function() {
+    const inputWrappers = document.querySelectorAll('form > div');
+    const inputs = document.querySelectorAll('form > div > input, form > div > textarea');
+
+    if (inputWrappers.length && inputs.length) {
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('focus', () => {
+          inputWrappers[i].classList.add('focused');
+        });
+        inputs[i].addEventListener('blur', () => {
+          if (inputs[i].value == '') {
+            inputWrappers[i].classList.remove('focused');
+          }
+        });
+      }
+    }
+  })();
+
+  // Custom selects
+  (function() {
+
+    for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
+      dropdown.addEventListener('click', function() {
+          this.querySelector('.custom-select').classList.toggle('open');
+      })
+    }
+
+    for (const option of document.querySelectorAll(".custom-option")) {
+      option.addEventListener('click', function() {
+          if (!this.classList.contains('selected')) {
+              this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+              this.classList.add('selected');
+              this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
+          }
+      })
+    }
+
+    window.addEventListener('click', function(e) {
+      for (const select of document.querySelectorAll('.custom-select')) {
+          if (!select.contains(e.target)) {
+              select.classList.remove('open');
+          }
+      }
+    });
+  })();
 });

@@ -10,6 +10,9 @@ node-sass -w --sourcemap=none --no-cache --output-style=compressed sass/main.sas
 	- Video
 - Static forms
 
+- Правки GBD
+
+- Баг цены услуг
 ---
 
 ## Проверить дополнительно:
