@@ -408,39 +408,18 @@
 						<label for="name">Ваше имя</label>
 					</div>
 					<div class="date">
-
-						<div class="custom-select-wrapper">
-							<div class="custom-select">
-									<div class="custom-select__trigger"><span>Дата</span>
-										<i class="fas fa-chevron-down arrow"></i>
-									</div>
-									<div class="custom-options">
-											<span class="custom-option selected" data-value="1">1</span>
-											<span class="custom-option" data-value="2">2</span>
-											<span class="custom-option" data-value="3">3</span>
-											<span class="custom-option" data-value="4">4</span>
-											<span class="custom-option" data-value="5">5</span>
-											<span class="custom-option" data-value="6">6</span>
-									</div>
-							</div>
-						</div>
-
-						<div class="custom-select-wrapper">
-							<div class="custom-select">
-									<div class="custom-select__trigger"><span>Время</span>
-										<i class="fas fa-chevron-down arrow"></i>
-									</div>
-									<div class="custom-options">
-											<span class="custom-option" data-value="10:00">10:00</span>
-											<span class="custom-option" data-value="11:00">11:00</span>
-											<span class="custom-option" data-value="12:00">12:00</span>
-											<span class="custom-option" data-value="13:00">13:00</span>
-											<span class="custom-option" data-value="14:00">14:00</span>
-											<span class="custom-option" data-value="15:00">15:00</span>
-									</div>
-							</div>
-						</div>
-
+						<select name="date" id="date">
+							<option value="" disabled selected>День</option>
+    					<option value="9">9</option>
+    					<option value="10">10</option>
+    					<option value="11">11</option>
+						</select>
+						<select name="time" id="time">
+							<option value="" disabled selected>Время</option>
+    					<option value="9">9:00</option>
+    					<option value="10">10:00</option>
+    					<option value="11">11:00</option>
+						</select>
 					</div>
 					<div class="email">
 						<input type="email" id="email">

@@ -153,3 +153,25 @@
 				text-decoration: underline
 				&:hover
 					color: $purple
+		&.date
+			display: flex
+			select
+				border: none
+				width: 100%
+				font-size: 18px
+				font-weight: 500
+				color: $gm
+				padding: 8px 0
+				border-bottom: 2px solid $gm
+				outline: none
+				cursor: pointer
+				background: url(../img/arrow_down.png) no-repeat right
+				-webkit-appearance: none
+				text-transform: uppercase
+				&:focus
+					border-color: $purple
+			#date
+				width: 50%
+			#time
+				width: 50%
+				margin-left: 48px
