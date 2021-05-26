@@ -6,7 +6,7 @@
         </radialGradient>
         <radialGradient id="radial-gradient-3" cx="-.278" cy="-.955" r="2.956" gradientTransform="matrix(.56 0 0 1 .22 0)" xlink:href="#radial-gradient"/>
         <style>
-            .cls-1,.cls-2,.cls-3{fill:#8651a7}.cls-1{opacity:.3}.cls-2,.cls-6{opacity:.6}.cls-5,.cls-6{fill:#ff1453}.cls-7,.cls-8{opacity:.5}.cls-7{fill:url(#radial-gradient)}.cls-8{fill:url(#radial-gradient-3)}.cls-12{fill:#fff}
+            .cls-1,.cls-2,.cls-3{fill:#8651a7}.cls-2,.cls-6{opacity:0.6}.cls-5,.cls-6{fill:#ff1453}.cls-7,.cls-8{opacity:0.5}.cls-7{fill:url(#radial-gradient)}.cls-8{fill:url(#radial-gradient-3)}.cls-12{fill:#fff}.cls-1{fill:#8651a7 !important;opacity:0.3}
         </style>
     </defs>
     <g id="logo" transform="translate(-186.714 -183.839)">

@@ -42,7 +42,7 @@ section.banner
 				position: absolute
 				right: 0
 				top: 0
-				transform: translate(150%, -90%)
+				transform: translate(150%, -90%) rotate(0)
 				font-size: 16px
 				color: $w
 		h1
@@ -81,6 +81,8 @@ section.banner
 				svg
 					margin-right: 12px
 					fill: $w
+					transform: translateY(0)
+					animation: bounce 1.5s linear infinite forwards
 
 section.services
 	padding-top: 144px
@@ -102,6 +104,8 @@ section.services
 					visibility: visible
 			h3 a
 				text-decoration-color: $purple
+			span i
+				animation: just_spin 5s linear infinite
 			@media (min-width: 1280px)
 				h3
 					padding-left: 72px
@@ -176,7 +180,8 @@ section.services
 			transition: all 0.2s linear
 			i
 				color: $purple
-				margin-right: 12px
+				font-size: 16px
+				margin-right: 6px
 
 section.program
 	margin-top: 144px
@@ -201,11 +206,12 @@ section.director
 	margin-top: 180px
 	.wrapper
 		display: flex
+		align-items: flex-start
 		padding: 0 72px
-		height: 720px
+		height: auto
 		.bg
 			width: 50%
-			height: 100%
+			height: 720px
 		.info
 			width: 50%
 			padding-left: 72px
@@ -223,7 +229,7 @@ section.director
 				&:not(:first-of-type)
 					margin-top: 18px
 			.socials
-				margin-top: auto
+				margin-top: 36px
 				display: flex
 				justify-content: space-between
 				a
@@ -251,7 +257,7 @@ section.pros
 	color: $w
 	.cards
 		display: flex
-		.card
+		> .card
 			width: 25%
 			height: 420px
 			background-image: linear-gradient(218deg, #262626 100%, #706f70 0%)
@@ -259,14 +265,12 @@ section.pros
 			flex-direction: column
 			justify-content: flex-end
 			padding: 0 36px 48px 36px
-			img
-				opacity: 0.8
 			&:hover
-				img
-					opacity: 0.5
-				.text
+				> img
+					opacity: 0.8
+				> .text
 					> svg
-						opacity: 0
+						opacity: 0 !important
 						visibility: hidden
 						transform: translateY(-50%)
 					h4
@@ -278,11 +282,15 @@ section.pros
 						transform: translateY(-10%)
 		img
 			transition: all 0.3s ease-in-out
+			opacity: 0.5
 		.text
 			position: relative
-			svg
+			> svg
 				width: 60px
 				height: 60px
+				opacity: 1 !important
+				visibility: visible !important
+				display: block !important
 				transition: all 0.2s ease-in-out
 			h4
 				font-size: 30px
@@ -347,9 +355,16 @@ section.reviews
 			color: $purple
 		i
 			font-weight: 100
+	.slick-list
+		transform: translateX(300px)
+
 section.partners
 	margin-top: 180px
+	overflow: visible
+	@media ( max-width: 768px )
+		overflow: hidden
 	.cards
+		width: 100%
 		display: inline-flex
 		flex-wrap: wrap
 		margin: 54px -18px 0
@@ -358,18 +373,22 @@ section.partners
 		background-color: $gl
 		width: 300px
 		height: 156px
+		transition: all 0.2s linear
+		&:hover
+			box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.12)
+			transform: scale(1.05)
+			filter: brightness(104%)
 section.info
 	margin-top: 180px
 	height: 788px
 	.wrapper
 		padding: 180px 315px 180px 72px
+	h2
+		margin-bottom: 36px
 	p
 		font-size: 24px
 		line-height: 1.33
-		&:first-of-type
-			margin-top: 60px
-		&:not(:first-of-type)
-			margin-top: 18px
+		margin-top: 18px
 	a
 		margin-top: 60px
 		text-transform: uppercase
@@ -453,14 +472,26 @@ section.workers
 	.card
 		width: calc( 100% / 4 - 24px )
 		margin: 24px 12px
+		&:hover
+			.bg
+				transform: scale(1.05)
+			h4
+				text-decoration-color: $purple
+				text-decoration-thickness: 2px
+			p i
+				animation: single_spin 0.4s linear
 		.bg
 			height: 320px
+			transition: all 0.15s linear
 		h4
 			margin-top: 18px
 			padding-right: 24px
 			font-size: 24px
 			font-weight: 500
 			line-height: 1.33
+			transition: all 0.15s linear
+			text-decoration: underline
+			text-decoration-color: $tsp
 		p
 			margin-top: 12px
 			padding-right: 24px
@@ -528,6 +559,8 @@ section.certs
 			margin-top: 8px
 			font-size: 18px
 			color: $gm
+section.program_margin
+	margin-top: 72px
 section.service_banner
 	.wrapper
 		justify-content: space-between
@@ -649,7 +682,7 @@ section.info_service
 		width: auto
 		left: unset
 		right: 0
-		transform: translate(-72px, -50%)
+		transform: translate(72px, -50%)
 section.indications
 	margin-top: 144px
 	.text
@@ -755,10 +788,10 @@ section.prices
 		margin-top: 72px
 		width: 100%
 	tr
-		position: relative
+		transform: scale(1)
 		&:not(:last-child)
 			border-bottom: 1px solid $cream
-		&::after
+		&::before
 			content: ''
 			position: absolute
 			z-index: -1
@@ -771,7 +804,7 @@ section.prices
 			height: 20%
 			opacity: 0
 		&:hover
-			&::after
+			&::before
 				height: 100%
 				opacity: 1
 			td:nth-child(3)

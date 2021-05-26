@@ -259,47 +259,57 @@ window.addEventListener("load", () => {
   // Labels animation
   (function() {
     const inputWrappers = document.querySelectorAll('form > div');
-    const inputs = document.querySelectorAll('form > div > input, form > div > textarea');
 
-    if (inputWrappers.length && inputs.length) {
-      for (let i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener('focus', () => {
-          inputWrappers[i].classList.add('focused');
-        });
-        inputs[i].addEventListener('blur', () => {
-          if (inputs[i].value == '') {
-            inputWrappers[i].classList.remove('focused');
-          }
-        });
+    if (inputWrappers.length) {
+      for (let i = 0; i < inputWrappers.length; i++) {
+        const input = inputWrappers[i].querySelector('input, textarea');
+
+        if (input) {
+          input.addEventListener('focus', () => {
+            inputWrappers[i].classList.add('focused');
+          });
+          input.addEventListener('blur', () => {
+            if (input.value == '') {
+              inputWrappers[i].classList.remove('focused');
+            }
+          });
+        }
+
       }
     }
   })();
 
-  // Custom selects
+  // Smooth anchors
   (function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
 
-    for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
-      dropdown.addEventListener('click', function() {
-          this.querySelector('.custom-select').classList.toggle('open');
-      })
-    }
-
-    for (const option of document.querySelectorAll(".custom-option")) {
-      option.addEventListener('click', function() {
-          if (!this.classList.contains('selected')) {
-              this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
-              this.classList.add('selected');
-              this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
-          }
-      })
-    }
-
-    window.addEventListener('click', function(e) {
-      for (const select of document.querySelectorAll('.custom-select')) {
-          if (!select.contains(e.target)) {
-              select.classList.remove('open');
-          }
-      }
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
     });
+  })();
+
+  // Read more
+  (function() {
+    const wrappeds = document.querySelectorAll('.wrapped');
+    const readMores = document.querySelectorAll('.readMore');
+
+    if (wrappeds.length && readMores.length) {
+      for (let i = 0; i < readMores.length; i++) {
+        readMores[i].addEventListener('click', () => {
+          if (wrappeds[i].classList.contains('active')) {
+            wrappeds[i].classList.remove('active');
+            readMores[i].innerText = 'Читать далее'
+          } else {
+            wrappeds[i].classList.add('active');
+            readMores[i].innerText = 'Свернуть'
+          }
+
+        });
+      }
+    }
   })();
 });

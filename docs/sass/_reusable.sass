@@ -146,6 +146,26 @@ h1.page_title
 		width: 110%
 		height: 50%
 
+.fas.plus_spin
+	animation: plus_spin 5s linear infinite
+
+.wrapped
+	transition: all 0.2s linear
+	max-height: 0
+	opacity: 0
+	visibility: hidden
+	&.active
+		max-height: 1000px
+		opacity: 1
+		visibility: visible
+.readMore
+	font-size: 18px
+	font-weight: 500
+	margin-top: 18px
+	color: $gm
+	&:hover
+		color: $purple
+
 // ---------------------------------------------------------------- Figures
 
 // ---------------------------------------------------------------- Mixins
